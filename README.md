@@ -1,3 +1,12 @@
+
+<img width="1080" height="1901" alt="Screenshot_2026-11-25-14-51-38-401_com android chrome-edit" src="https://github.com/user-attachments/assets/d480edff-19c0-42db-93b1-3aab5b304e6b" />
+<img width="1800" height="1520" alt="screenshot-light" src="https://github.com/user-attachments/assets/86f79efd-a2b4-4500-9991-78b2184c429e" />
+<img width="1800" height="1520" alt="screenshot" src="https://github.com/user-attachments/assets/b74a0467-a75c-4184-aebf-8c8016912260" />
+<img width="2000" height="1600" alt="settings" src="https://github.com/user-attachments/assets/c3402a7d-87ea-46e6-9de1-a280be868018" />
+
+Improves the login dialog: big countdown back to the home page, Home shortcut and a clearer Login button.
+
+
 # Login Enhancer（登錄界面改進）
 
 深色主題：
