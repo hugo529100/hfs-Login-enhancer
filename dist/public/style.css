@@ -1,0 +1,101 @@
+/* Login Enhancer - styles for the extra block inside HFS' login dialog.
+   Colors come from HFS' own CSS variables, so light/dark themes are followed. */
+
+.login-dialog .lge-box {
+    display: flex;
+    flex-direction: column;
+    gap: .9em;
+}
+
+/* give the big number and the fields some breathing room, but only when the
+   screen is wide enough to avoid horizontal scrolling on phones */
+@media (min-width: 600px) {
+    .login-dialog .lge-box {
+        min-width: 18em;
+    }
+}
+
+.login-dialog .lge-countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+}
+
+/* the two lines above the number stay together, while the number gets the
+   same visual breathing room above and below (label <-> number == number <-> unit).
+   The padding is em-based on the number itself, so it scales with its size. */
+.login-dialog .lge-count {
+    font-size: min(10em, 30vw, 25vh);
+    font-weight: 700;
+    line-height: .9;
+    letter-spacing: -.02em;
+    padding: .12em 0 .012em;
+    color: inherit; /* follow the current page's text color (and its transparency) */
+    font-variant-numeric: tabular-nums;
+}
+
+.login-dialog .lge-countdown-label,
+.login-dialog .lge-countdown-unit {
+    font-size: .95em;
+    line-height: 1.35;
+    color: inherit;
+}
+
+.login-dialog .lge-home {
+    width: 100%;
+    font-size: 1.05em;
+    padding: .45em .6em;
+}
+
+/* the submit button spans the dialog and stands taller */
+.login-dialog .submit button {
+    width: 100%;
+    min-height: 2.8em;
+    padding: .6em .8em;
+    font-size: 1.05em;
+}
+
+/* title of the state that caused the login dialog */
+.login-dialog .lge-unauthorized {
+    text-align: center;
+    font-size: 1.15em;
+    font-weight: 600;
+    letter-spacing: .02em;
+    color: inherit;
+}
+
+/* keep the two lines above the big number close together */
+.login-dialog .lge-unauthorized + .lge-countdown {
+    margin-top: -.8em;
+}
+
+/* the dialog frame breathes softly (the animation itself is started from JS,
+   because some themes disable CSS animations for performance) */
+.login-dialog .dialog {
+    outline: 1px solid transparent;
+}
+
+@keyframes lge-frame-breath {
+    0%, 100% {
+        outline-color: transparent;
+        outline-width: 1px;
+    }
+    50% {
+        /* currentColor = the text color of the current page/theme */
+        outline-color: currentColor;
+        outline-width: 4px;
+    }
+}
+
+/* the page behind the dialog: hide the banner and the big "Unauthorized" heading */
+body.lge-login-open #banner,
+body.lge-login-open .unauthorized {
+    display: none;
+}
+
+.login-dialog .lge-sep {
+    border-top: 1px solid var(--faint-contrast);
+    margin-top: .1em;
+}

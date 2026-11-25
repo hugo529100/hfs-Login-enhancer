@@ -1,0 +1,9 @@
+{
+    "author": "Hug3O",
+    "version": 1,
+    "translate": {
+        "loginEnhancer_countdownLabel": "将在",
+        "loginEnhancer_countdownUnit": "秒后返回首页",
+        "loginEnhancer_home": "首页"
+    }
+}
